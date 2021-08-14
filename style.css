@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  width: 500px;
+  height: 100%;
+  margin: 30px auto;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+  padding: 30px;
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__search {
+  border: none;
+  border-bottom: 1px solid blue;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.form__button {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+}
+
+.form__button:hover {
+  background-color: #33a3a3;
+  color: white;
+}
+
+.form__button:active {
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px #747474;
+          box-shadow: 2px 2px 2px #747474;
+  color: #61b117;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.result {
+  color: #000;
+  text-align: center;
+}
+
+.text {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 30px 5px 5px 5px;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+}
+
+.button:hover {
+  background-color: #33a3a3;
+  color: white;
+}
+
+.button:active {
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px #747474;
+          box-shadow: 2px 2px 2px #747474;
+  color: #61b117;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.tabs-item {
+  width: 500px;
+  height: 100%;
+  margin: 30px auto;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.conteiner-tabs {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  padding: 30px 15px;
+  border-top: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+
+.tabs {
+  width: 320px;
+  height: 115px;
+  margin: 0 auto;
+}
+
+.tabs-nav {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.tabs-nav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tabs-nav__link {
+  text-decoration: none;
+  color: #000000;
+  padding: 0 10px 10px 10px;
+}
+
+.tabs-nav .tabs-nav__link.active {
+  border-bottom: 1px solid blue;
+  color: blue;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid blue;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.container-result {
+  width: 300px;
+  height: 100%;
+  margin: 30px auto;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+  padding-bottom: 30px;
+}
+
+.operators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-right: 30px;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.size-icon {
+  font-size: 12px;
+}
+/*# sourceMappingURL=style.css.map */

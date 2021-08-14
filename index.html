@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <script src="https://kit.fontawesome.com/15987df765.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">  
+    <h1 class="title">Learn frontend</h1>
+    <form action="#" class="form"> 
+      <input type="text" name="text" class="form__search" placeholder="Your question?">
+      <input type="submit" value="Search answer" class="form__button">
+    </form>
+    <div class="result"></div>
+  </div>
+
+  <div class="conteiner-tabs" id="tabs">
+    <h2 class="title">Calculator <i class="fas fa-calculator"></i></h2>
+
+    <div class="tabs">
+      <ul class="tabs-nav">
+        <li class="tabs-nav__item">
+          <a href="#plus" class="tabs-nav__link">Plus <i class="fas fa-plus center"></i></a>
+        </li>
+        <li class="tabs-nav__item">
+          <a href="#minus" class="tabs-nav__link">Minus <i class="fas fa-minus center"></i></a>
+        </li>
+        <li class="tabs-nav__item">
+          <a href="#multiplic" class="tabs-nav__link">Multiplication <i class="fas fa-times center"></i></a>
+        </li>
+        <li class="tabs-nav__item">
+          <a href="#division" class="tabs-nav__link">Division <i class="fas fa-divide center"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tabs-items">
+      <div class="tabs-item" id="plus">
+        <input type="number" class="input" id="input3">
+        <p class="operators"><i class="fas fa-plus"></i></p>
+        <input type="number" class="input" id="input4">
+        <input type="submit" value="Result" class="button" id="btn1">
+      </div>
+
+      <div class="tabs-item" id="minus">
+        <input type="number" class="input" id="input5">
+        <p class="operators"><i class="fas fa-minus"></i></p>
+        <input type="number" class="input" id="input6">
+        <input type="submit" value="Result" class="button" id="btn2">
+      </div>
+
+      <div class="tabs-item" id="multiplic">
+        <input type="number" class="input" id="input1">
+        <p class="operators"><i class="fas fa-times"></i></p>
+        <input type="number" class="input" id="input2">
+        <input type="submit" value="Result" class="button" id="btn">
+      </div>
+
+      <div class="tabs-item" id="division">
+        <input type="number" class="input" id="input7">
+        <p class="operators"><i class="fas fa-divide"></i></p>
+        <input type="number" class="input" id="input8">
+        <input type="submit" value="Result" class="button" id="btn3">
+      </div>
+    </div>
+    <div id="result">
+      <!-- <p class="text"><b>Your result:</b> </p> -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./tabs-window.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
