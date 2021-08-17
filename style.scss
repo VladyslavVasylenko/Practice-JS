@@ -133,6 +133,7 @@
 .tabs-nav__item{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 24px;
   font-weight: 700;
@@ -184,4 +185,27 @@
 
 .size-icon {
   font-size: 12px;
+}
+
+.output {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.input-search{
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid blue;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.list {
+  margin: 30px 0 30px 0;
+  font-size: 18px;
+  font-weight: 700;
 }

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <!-- Frontend -->
   <div class="container">  
     <h1 class="title">Learn frontend</h1>
     <form action="#" class="form"> 
@@ -18,23 +19,32 @@
     <div class="result"></div>
   </div>
 
+  <!-- Calculator -->
   <div class="conteiner-tabs" id="tabs">
     <h2 class="title">Calculator <i class="fas fa-calculator"></i></h2>
 
     <div class="tabs">
       <ul class="tabs-nav">
         <li class="tabs-nav__item">
-          <a href="#plus" class="tabs-nav__link">Plus <i class="fas fa-plus center"></i></a>
+          <!-- <a href="#plus" class="tabs-nav__link"><i class="fas fa-plus center"></i></a> -->
+          <a href="#plus" class="tabs-nav__link">Plus<i class="fas fa-plus center"></i></a>
         </li>
+
         <li class="tabs-nav__item">
-          <a href="#minus" class="tabs-nav__link">Minus <i class="fas fa-minus center"></i></a>
+          <!-- <a href="#minus" class="tabs-nav__link"><i class="fas fa-minus center"></i></a> -->
+          <a href="#minus" class="tabs-nav__link">Minus<i class="fas fa-minus center"></i></a>
         </li>
+
         <li class="tabs-nav__item">
-          <a href="#multiplic" class="tabs-nav__link">Multiplication <i class="fas fa-times center"></i></a>
+          <!-- <a href="#multiplic" class="tabs-nav__link"><i class="fas fa-times center"></i></a> -->
+          <a href="#multiplic" class="tabs-nav__link">Multiplication<i class="fas fa-times center"></i></a>
         </li>
+
         <li class="tabs-nav__item">
-          <a href="#division" class="tabs-nav__link">Division <i class="fas fa-divide center"></i></a>
+          <!-- <a href="#division" class="tabs-nav__link"><i class="fas fa-divide center"></i></a> -->
+          <a href="#division" class="tabs-nav__link">Division<i class="fas fa-divide center"></i></a>
         </li>
+
       </ul>
     </div>
 
@@ -67,12 +77,23 @@
         <input type="submit" value="Result" class="button" id="btn3">
       </div>
     </div>
-    <div id="result">
-      <!-- <p class="text"><b>Your result:</b> </p> -->
-    </div>
+    <div id="result"></div>
   </div>
 
+  <!-- See product -->
+  <div class="product" id="lucky"></div>
+
+  <!-- Practics -->
+  <div class="output">
+    <input type="text" placeholder="Your text" class="input-search">
+    <button class="button">Search</button>
+    <ul class="list"></ul>
+    <p></p>
+  </div>
+
+
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script type="module" src="./product.js"></script>
   <script src="./tabs-window.js"></script>
   <script src="./script.js"></script>
 </body>
