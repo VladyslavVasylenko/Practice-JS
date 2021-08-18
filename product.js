@@ -121,3 +121,4 @@ searchBtn.onclick = function() {
     searchInput.focus();
   }
 }
+
