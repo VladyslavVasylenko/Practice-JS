@@ -187,6 +187,15 @@
   font-size: 12px;
 }
 
+.operators-percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding-right: 30px;
+  margin-left: -50px;
+}
+
 .output {
   width: 300px;
   margin: 30px auto;

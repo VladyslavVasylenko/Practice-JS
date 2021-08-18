@@ -92,3 +92,20 @@ btnClick5.onclick = function(e) {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber7.value + ' <i class="fas fa-divide size-icon"></i> ' + userNumber8.value + ' <i class="fas fa-equals size-icon"></i> ' + division + '</b>' + '</p>';
   }
 }
+
+// Percent
+
+const userNumber9 = document.querySelector('#input9');
+const userNumber10 = document.querySelector('#input10');
+const btnClick6 = document.querySelector('#btn4');
+
+btnClick6.onclick = function(e) {
+  e.preventDefault();
+  let division = Number(userNumber9.value) / 100 * Number(userNumber10.value);
+
+  if ( userNumber9.value == '' ) {
+    document.querySelector('#result').innerHTML = '<p class="text"><b>Send number</b></p>';
+  } else {
+    result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber9.value + '<i class="fas fa-percent size-icon"></i> from ' + userNumber10.value + ' <i class="fas fa-equals size-icon"></i> ' + division + '</b>' + '</p>';
+  }
+}
