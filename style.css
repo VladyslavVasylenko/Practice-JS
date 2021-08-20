@@ -263,4 +263,33 @@
   font-weight: 700;
   list-style-type: decimal;
 }
+
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #b3ff00;
+  margin-bottom: 10px;
+}
+
+.one {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.two {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.three {
+  font-weight: 600;
+  color: aqua;
+}
 /*# sourceMappingURL=style.css.map */

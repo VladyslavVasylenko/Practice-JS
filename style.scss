@@ -220,3 +220,29 @@
   font-weight: 700;
   list-style-type: decimal;
 }
+
+// Table
+.table {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(179, 255, 0);
+  margin-bottom: 10px;
+}
+
+.one {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.two {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.three {
+  font-weight: 600;
+  color: aqua;
+}
