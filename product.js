@@ -203,3 +203,12 @@ let re = document.querySelector('#re');
 for (let key in obj2) {
   re.innerHTML += '<p>' + obj2[key] + '</p>';
 }
+
+//string sort
+let b = ['mali', 'holli', 'dary', 'aba',];
+console.log(b);
+let sorted = b.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); 
+console.log(b);
+
+let all = Object.assign(b);
+console.log(all);

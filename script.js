@@ -102,7 +102,6 @@ btnClick5.onclick = function(e) {
 }
 
 // Percent
-
 const userNumber9 = document.querySelector('#input9');
 const userNumber10 = document.querySelector('#input10');
 const btnClick6 = document.querySelector('#btn4');
