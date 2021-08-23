@@ -150,12 +150,12 @@ searchBtn.onclick = function() {
 // elclass.addEventListener('click', addClass, false);
 
 // Object.prototype.constructor
-function Tree(name) {
-  this.name = name;
-}
+// function Tree(name) {
+//   this.name = name;
+// }
 
-let theTree = new Tree('Red tree');
-console.log('theTree.constructor = ' + theTree);
+// let theTree = new Tree('Red tree');
+// console.log('theTree.constructor = ' + theTree);
 
 // Rabbit
 // function Rabbit(name) {
@@ -181,28 +181,28 @@ console.log('theTree.constructor = ' + theTree);
 
 // console.log( rabbit.eats );
 
-function Obj( userName, userAge, userPost, date, time ) {
-  this.userName = userName;
-  this.userAge = userAge;
-  this.userPost = userPost;
-  this.date = date;
-  this.time = time;
-  console.log( userName + ' ' + "my age: " + userAge + ' my message: ' + userPost + ' ' + date + ' ' + time );
-}
+// function Obj( userName, userAge, userPost, date, time ) {
+//   this.userName = userName;
+//   this.userAge = userAge;
+//   this.userPost = userPost;
+//   this.date = date;
+//   this.time = time;
+//   console.log( userName + ' ' + "my age: " + userAge + ' my message: ' + userPost + ' ' + date + ' ' + time );
+// }
 
-let obj = new Obj("Vlad", 33, 'my work is it important', '20.08.2021', '10:09:36');
+// let obj = new Obj("Vlad", 33, 'my work is it important', '20.08.2021', '10:09:36');
 
-let obj2 = Object.assign({}, obj);
+// let obj2 = Object.assign({}, obj);
 
-obj2.userName = 'Olga';
-// let obj2 = new obj.constructor();
-console.log(obj);
+// obj2.userName = 'Olga';
+// // let obj2 = new obj.constructor();
+// console.log(obj);
 
-let re = document.querySelector('#re');
+// let re = document.querySelector('#re');
 
-for (let key in obj2) {
-  re.innerHTML += '<p>' + obj2[key] + '</p>';
-}
+// for (let key in obj2) {
+//   re.innerHTML += '<p>' + obj2[key] + '</p>';
+// }
 
 //string sort
 let b = ['mali', 'holli', 'dary', 'aba',];
@@ -210,5 +210,77 @@ console.log(b);
 let sorted = b.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); 
 console.log(b);
 
-let all = Object.assign(b);
-console.log(all);
+// let all = Object.assign({} a, b);
+// console.log(all);
+
+// prototype
+const person = new  Object({
+  name: 'Maxsim',
+  age: 25,
+  greet: function() {
+    console.log('Greet!');
+  },
+});
+
+// Object.prototype.sayHello = function() {
+//   console.log('Hello');
+// };
+
+// person.sayHello();
+console.log(person);
+
+// const lena = Object.create(person);
+// lena.name = 'Elena';
+// console.log(lena);
+
+const str = new String('I`m string');
+console.log(str);
+console.log(str.length);
+// str.sayHello();
+
+function hello() {
+  console.log('Hello', this);
+};
+
+const p = {
+  name: 'Vlad',
+  age: 33,
+  sayHello: hello,
+  sayHelloWindow: hello.bind(document),
+  logInfo: function(job, phone) {
+    console.group(`${this.name} info:`);
+    console.log(`Name is ${this.name} his age: ${this.age}`);
+    console.log(`Job is ${job}`);
+    console.log(`Phone is ${phone}`);
+    console.groupEnd();
+  },
+}
+
+const lena = {
+  name: 'Elena',
+  age: 33,
+}
+
+p.sayHello();
+p.sayHelloWindow();
+p.logInfo();
+
+p.logInfo.bind(lena, 'Developer', "0123654789")();
+p.logInfo.call(lena, 'Developer', "0123654789");
+p.logInfo.apply(lena, ['Developer', "0123654789"]);
+
+const array = [1,2,3,4,5];
+
+// function multBy(arr, n) {
+//   return arr.map(function(i) {
+//     return i * n;
+//   });
+// }
+
+Array.prototype.multBy = function(n) {
+    return this.map(function(i) {
+    return i * n;
+  });
+}
+
+console.log(array.multBy(15));
