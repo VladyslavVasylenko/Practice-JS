@@ -6,6 +6,8 @@ const formLastName = document.querySelector('#last-name');
 const formPhone = document.querySelector('#phone');
 const formCity = document.querySelector('#city');
 const formEducation = document.querySelector('#education');
+const formUserText = document.querySelector('#about');
+const userFile = document.querySelector('#userFile');
 
 let resultDoc = document.querySelector('#resultDoc');
 

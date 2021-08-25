@@ -92,35 +92,35 @@
 
 // totalBox.textContent = 'Total: $' + total.toFixed(2);
 
-let list = document.querySelector('.output ul');
-let searchInput = document.querySelector('.output input');
-let searchBtn = document.querySelector('.output button');
+// let list = document.querySelector('.output ul');
+// let searchInput = document.querySelector('.output input');
+// let searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+// list.innerHTML = '';
 
-let myHistory= [];
+// let myHistory= [];
 
-searchBtn.onclick = function() {
-  if( searchInput.value !== '' ) {
-    myHistory.unshift( searchInput.value );
+// searchBtn.onclick = function() {
+//   if( searchInput.value !== '' ) {
+//     myHistory.unshift( searchInput.value );
 
-    list.innerHTML = '';
+//     list.innerHTML = '';
 
-    for( let i = 0; i < myHistory.length; i++ ) {
-      let itemText = myHistory[i];
-      let listItem = document.createElement('li');
-      listItem.textContent = itemText;
-      list.appendChild(listItem);
-    }
+//     for( let i = 0; i < myHistory.length; i++ ) {
+//       let itemText = myHistory[i];
+//       let listItem = document.createElement('li');
+//       listItem.textContent = itemText;
+//       list.appendChild(listItem);
+//     }
 
-    if(myHistory.length >= 5) {
-      myHistory.pop();
-    }
+//     if(myHistory.length >= 5) {
+//       myHistory.pop();
+//     }
 
-    searchInput.value = '';
-    searchInput.focus();
-  }
-}
+//     searchInput.value = '';
+//     searchInput.focus();
+//   }
+// }
 
 // addEventListener
 
@@ -205,71 +205,71 @@ searchBtn.onclick = function() {
 // }
 
 //string sort
-let b = ['mali', 'holli', 'dary', 'aba',];
-console.log(b);
-let sorted = b.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); 
-console.log(b);
+// let b = ['mali', 'holli', 'dary', 'aba',];
+// console.log(b);
+// let sorted = b.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); 
+// console.log(b);
 
 // let all = Object.assign({} a, b);
 // console.log(all);
 
 // prototype
-const person = new  Object({
-  name: 'Maxsim',
-  age: 25,
-  greet: function() {
-    console.log('Greet!');
-  },
-});
+// const person = new  Object({
+//   name: 'Maxsim',
+//   age: 25,
+//   greet: function() {
+//     console.log('Greet!');
+//   },
+// });
 
 // Object.prototype.sayHello = function() {
 //   console.log('Hello');
 // };
 
 // person.sayHello();
-console.log(person);
+// console.log(person);
 
 // const lena = Object.create(person);
 // lena.name = 'Elena';
 // console.log(lena);
 
-const str = new String('I`m string');
-console.log(str);
-console.log(str.length);
+// const str = new String('I`m string');
+// console.log(str);
+// console.log(str.length);
 // str.sayHello();
 
-function hello() {
-  console.log('Hello', this);
-};
+// function hello() {
+//   console.log('Hello', this);
+// };
 
-const p = {
-  name: 'Vlad',
-  age: 33,
-  sayHello: hello,
-  sayHelloWindow: hello.bind(document),
-  logInfo: function(job, phone) {
-    console.group(`${this.name} info:`);
-    console.log(`Name is ${this.name} his age: ${this.age}`);
-    console.log(`Job is ${job}`);
-    console.log(`Phone is ${phone}`);
-    console.groupEnd();
-  },
-}
+// const p = {
+//   name: 'Vlad',
+//   age: 33,
+//   sayHello: hello,
+//   sayHelloWindow: hello.bind(document),
+//   logInfo: function(job, phone) {
+//     console.group(`${this.name} info:`);
+//     console.log(`Name is ${this.name} his age: ${this.age}`);
+//     console.log(`Job is ${job}`);
+//     console.log(`Phone is ${phone}`);
+//     console.groupEnd();
+//   },
+// }
 
-const lena = {
-  name: 'Elena',
-  age: 33,
-}
+// const lena = {
+//   name: 'Elena',
+//   age: 33,
+// }
 
-p.sayHello();
-p.sayHelloWindow();
-p.logInfo();
+// p.sayHello();
+// p.sayHelloWindow();
+// p.logInfo();
 
-p.logInfo.bind(lena, 'Developer', "0123654789")();
-p.logInfo.call(lena, 'Developer', "0123654789");
-p.logInfo.apply(lena, ['Developer', "0123654789"]);
+// p.logInfo.bind(lena, 'Developer', "0123654789")();
+// p.logInfo.call(lena, 'Developer', "0123654789");
+// p.logInfo.apply(lena, ['Developer', "0123654789"]);
 
-const array = [1,2,3,4,5];
+// const array = [1,2,3,4,5];
 
 // function multBy(arr, n) {
 //   return arr.map(function(i) {
@@ -277,10 +277,44 @@ const array = [1,2,3,4,5];
 //   });
 // }
 
-Array.prototype.multBy = function(n) {
-    return this.map(function(i) {
-    return i * n;
-  });
+// Array.prototype.multBy = function(n) {
+//     return this.map(function(i) {
+//     return i * n;
+//   });
+// }
+
+// console.log(array.multBy(15));
+
+const z = {
+  let: 'red',
+  dev: 'blue',
+  some: 'Some',
+  funt: {
+    rudy: 'cat',
+    "name cat": 'Rudy',
+  },
+  run() {
+    console.log(`My ${this.funt.rudy} have name ${this.funt['name cat']}`);
+  },
 }
 
-console.log(array.multBy(15));
+let d = Object.create(z);
+
+d.izi = 'green';
+console.log(d);
+console.log(z);
+
+// for (let key in d) {
+//   console.log(key);
+//   console.log(d[key]);
+// };
+
+d.funt.rudy = 'dog';
+d.funt["name cat"] = 'Baks';
+
+Object.assign(d, { dog: "dog", "name dog": "Baks", });
+
+console.log(z);
+console.log(d);
+z.run();
+d.run();
