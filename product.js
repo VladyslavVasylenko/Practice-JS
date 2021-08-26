@@ -92,38 +92,38 @@
 
 // totalBox.textContent = 'Total: $' + total.toFixed(2);
 
-// let list = document.querySelector('.output ul');
-// let searchInput = document.querySelector('.output input');
-// let searchBtn = document.querySelector('.output button');
+// Search project //
+let list = document.querySelector('.output ul');
+let searchInput = document.querySelector('.output input');
+let searchBtn = document.querySelector('.output button');
 
-// list.innerHTML = '';
+list.innerHTML = '';
 
-// let myHistory= [];
+let myHistory= [];
 
-// searchBtn.onclick = function() {
-//   if( searchInput.value !== '' ) {
-//     myHistory.unshift( searchInput.value );
+searchBtn.onclick = function() {
+  if( searchInput.value !== '' ) {
+    myHistory.unshift( searchInput.value );
 
-//     list.innerHTML = '';
+    list.innerHTML = '';
 
-//     for( let i = 0; i < myHistory.length; i++ ) {
-//       let itemText = myHistory[i];
-//       let listItem = document.createElement('li');
-//       listItem.textContent = itemText;
-//       list.appendChild(listItem);
-//     }
+    for( let i = 0; i < myHistory.length; i++ ) {
+      let itemText = myHistory[i];
+      let listItem = document.createElement('li');
+      listItem.textContent = itemText;
+      list.appendChild(listItem);
+    }
 
-//     if(myHistory.length >= 5) {
-//       myHistory.pop();
-//     }
+    if(myHistory.length >= 5) {
+      myHistory.pop();
+    }
 
-//     searchInput.value = '';
-//     searchInput.focus();
-//   }
-// }
+    searchInput.value = '';
+    searchInput.focus();
+  }
+}
 
-// addEventListener
-
+// AddEventListener project //
 // function modifyText() {
 //   let table__item2 = document.getElementById('table__item2');
 //   if (table__item2.firstChild.nodeValue == 'Three') {
@@ -157,7 +157,7 @@
 // let theTree = new Tree('Red tree');
 // console.log('theTree.constructor = ' + theTree);
 
-// Rabbit
+// Rabbit project //
 // function Rabbit(name) {
 //   this.name = name;
 //   console.log(name);
@@ -181,6 +181,7 @@
 
 // console.log( rabbit.eats );
 
+// Practics //
 // function Obj( userName, userAge, userPost, date, time ) {
 //   this.userName = userName;
 //   this.userAge = userAge;
@@ -204,7 +205,7 @@
 //   re.innerHTML += '<p>' + obj2[key] + '</p>';
 // }
 
-//string sort
+//String sort //
 // let b = ['mali', 'holli', 'dary', 'aba',];
 // console.log(b);
 // let sorted = b.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); 
@@ -318,3 +319,82 @@ console.log(z);
 console.log(d);
 z.run();
 d.run();
+
+const userPerson = new Object({
+  name: "Max",
+  age: 25,
+  greet: function() {
+    console.log('Greet!');
+  }
+});
+
+Object.prototype.sayHello = function() {
+  console.log('Hello!');
+}
+
+console.log(userPerson);
+
+const lena = Object.create(userPerson);
+lena.name = 'Elena';
+console.log(lena);
+console.log(lena.age);
+
+for (let key in lena) {
+  console.log(key + ' - ' + lena[key]);
+};
+
+function urlGenerator(domain) {
+  return function(url) {
+    return `https://${url}.${domain}`;
+  }
+}
+
+const comUrl = urlGenerator('com');
+const ruUrl = urlGenerator('ru');
+
+console.log(comUrl('google'));
+console.log(ruUrl('vk'));
+
+function bind(context, fn) {
+  return function(...args) {
+    fn.apply(context, args);
+  }
+}
+
+function cat() {
+  console.log(`Cat: have name ${this.name}, age: ${this.age}, color: ${this.color}`);
+}
+
+const catRudy = {
+  name: 'Rudy',
+  age: 12,
+  color: 'orange'
+};
+
+bind(catRudy, cat)();
+
+const u = {
+  name: 'Pupkin',
+  age: 33,
+  profecion: "dev",
+  salary: 10000,
+}
+
+console.log(u);
+
+// u.pasport = "vv667788";
+Object.defineProperty(u, 'pasport', {
+  value: "vv557799",
+  enumerable: true,
+})
+
+let keys = Object.keys(u);
+console.log(keys);
+
+let values = Object.values(u);
+console.log(values);
+
+let entries = Object.entries(u);
+console.log(entries);
+
+entries.map(([index, item]) => console.log(index, item));

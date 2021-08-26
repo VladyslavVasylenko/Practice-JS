@@ -19,7 +19,8 @@ formDoc.addEventListener('submit', function (e) {
     '<p class="document__text">' + '<b>Last name:</b> ' + formLastName.value + '</p>' +
     '<p class="document__text">' + '<b>Phone number:</b> ' + formPhone.value + '</p>' +
     '<p class="document__text">' + '<b>Home address:</b> ' + formCity.value + '</p>' +
-    '<p class="document__text">' + '<b>Has an education:</b> ' + formEducation.value + '</p>';
+    '<p class="document__text">' + '<b>Has an education:</b> ' + formEducation.value + '</p>' +
+    '<p class="document__text">' + '<b>About you:</b> ' + formUserText.value + '</p>';
     formDoc.reset();
   }
 });
