@@ -82,10 +82,10 @@
         <input type="submit" value="Result" class="button" id="btn3">
       </div>
 
-      <div class="tabs-item" id="percent">
-        <input type="number" class="input" id="input9" placeholder="Your percent">
+      <div class="tabs-item cen-md" id="percent">
+        <input type="number" class="input cen" id="input9" placeholder="Your percent">
         <p class="operators-percent"><i class="fas fa-percent"></i></p>
-        <input type="number" class="input" id="input10" placeholder="Your number">
+        <input type="number" class="input cen" id="input10" placeholder="Your number">
         <input type="submit" value="Result" class="button" id="btn4">
       </div>
     </div>
@@ -96,57 +96,68 @@
   <div class="product" id="lucky"></div>
 
   <!-- Practics -->
-  <div class="output">
-    <input type="text" placeholder="Your text" class="input-search">
-    <button class="button">Search</button>
-    <ul class="list"></ul>
-    <p></p>
+  <div class="outpu__conteiner">
+    <div class="output">
+      <input type="text" placeholder="Your text" class="input-search">
+      <button class="button">Search</button>
+      <ul class="list"></ul>
+      <p></p>
+    </div>
   </div>
 
-  <!-- addEventListener -->
-  <!-- <table id="table" class="table">
-    <tr>
-      <td id="table__item1" class="one">One</td>
-    </tr>
-    <tr>
-      <td id="table__item2" class="two">Two</td>
-    </tr>
-  </table> -->
-
-  <div class="text" id="re"></div>
-
   <!-- Form Document -->
-  <form action="#" class="form-doc field">
-    <label for="name" class="form-doc__caption">Name</label>
-    <input type="text" name="name" id="name" class="form-doc__item field" required>
-
-    <label for="last-name" class="form-doc__caption">Last name</label>
-    <input type="text" name="last-name" id="last-name" class="form-doc__item field" required>
-
-    <label for="phone" class="form-doc__caption">Phone number</label>
-    <input type="number" name="phone" id="phone" class="form-doc__item field" required>
-
-    <label for="city" class="form-doc__caption">City</label>
-    <input type="text" name="city" id="city" class="form-doc__item" required>
-
-    <label for="education" class="form-doc__caption">Education</label>
-    <input type="text" name="education" id="education" class="form-doc__item field" required>
-
-    <label for="about" class="form-doc__caption">Write about you</label>
-    <input type="text" name="about" id="about" class="form-doc__item--about field" required>
-
-    <!-- <label for="userFile" class="form-doc__caption">Upload your photo</label>
-    <input name="userFile" id="userFile" type="file" class="form-doc__item--about field" required> -->
-
-    <input type="submit" value="Submit" class="form-doc__btn">
-  </form>
+  <div class="container">
+    <form action="#" class="form-doc field">
+      <label for="name" class="form-doc__caption">Name</label>
+      <input type="text" name="name" id="name" class="form-doc__item field" required>
+  
+      <label for="last-name" class="form-doc__caption">Last name</label>
+      <input type="text" name="last-name" id="last-name" class="form-doc__item field" required>
+  
+      <label for="phone" class="form-doc__caption">Phone number</label>
+      <input type="number" name="phone" id="phone" class="form-doc__item field" required>
+  
+      <label for="city" class="form-doc__caption">City</label>
+      <input type="text" name="city" id="city" class="form-doc__item" required>
+  
+      <label for="education" class="form-doc__caption">Education</label>
+      <input type="text" name="education" id="education" class="form-doc__item field" required>
+  
+      <label for="about" class="form-doc__caption">Write about you</label>
+      <input type="text" name="about" id="about" class="form-doc__item--about field" required>
+  
+      <!-- <label for="userFile" class="form-doc__caption">Upload your photo</label>
+      <input name="userFile" id="userFile" type="file" class="form-doc__item--about field" required> -->
+  
+      <input type="submit" value="Submit" class="form-doc__btn">
+    </form>
+  </div>
 
   <div class="document" id="resultDoc"></div>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+  <!-- Total fuel -->
+  <div class="container">
+    <form action="#" class="form-docs field">
+      <label for="spend" class="form-doc__caption">Spend Fuel</label>
+      <input type="number" id="spend" class="form-doc__item field" name="spend" required>
+
+      <label for="km" class="form-doc__caption">Way km</label>
+      <input type="number" id="away" class="form-doc__item field" name="away" required>
+
+      <label for="sum" class="form-doc__caption">Sum for 1 litre</label>
+      <input type="number" step="0.01" min="0" placeholder="0,00" id="sum" class="form-doc__item field" name="sum" required>
+
+      <input type="submit" value="Total" class="form-doc__btn">
+    </form>
+
+    <div class="document" id="total"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./amount.js"></script>
   <script src="./form-doc.js"></script>
   <script type="module" src="./product.js"></script>
-  <!-- <script src="./tabs-window.js"></script> -->
+  <script src="./tabs-window.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>

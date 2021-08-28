@@ -82,32 +82,10 @@
   padding: 30px 5px 5px 5px;
 }
 
-.button {
-  background-color: white;
-  color: black;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
-}
-
-.button:hover {
-  background-color: #33a3a3;
-  color: white;
-}
-
-.button:active {
-  background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #747474;
-          box-shadow: 2px 2px 2px #747474;
-  color: #61b117;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
+.tabs {
+  width: 320px;
+  height: 115px;
+  margin: 0 auto;
 }
 
 .tabs-item {
@@ -129,12 +107,6 @@
   padding: 30px 15px;
   border-top: 1px solid blue;
   border-bottom: 1px solid blue;
-}
-
-.tabs {
-  width: 320px;
-  height: 115px;
-  margin: 0 auto;
 }
 
 .tabs-nav {
@@ -240,13 +212,50 @@
   margin-left: -50px;
 }
 
+.button {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+}
+
+.button:hover {
+  background-color: #33a3a3;
+  color: white;
+}
+
+.button:active {
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px #747474;
+          box-shadow: 2px 2px 2px #747474;
+  color: #61b117;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
 .output {
   width: 300px;
   margin: 30px auto;
 }
 
+.outpu__conteiner {
+  width: 320px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #2bff00;
+}
+
 .input-search {
   width: 200px;
+  margin: 0 auto;
   border: none;
   border-bottom: 1px solid blue;
   background-color: white;
@@ -258,39 +267,11 @@
 }
 
 .list {
-  margin: 30px 0 30px 0;
+  margin: 30px 0 30px 13px;
+  padding: 10px;
   font-size: 18px;
   font-weight: 700;
   list-style-type: decimal;
-}
-
-.table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid #b3ff00;
-  margin-bottom: 10px;
-}
-
-.one {
-  font-size: 18px;
-  font-weight: 500;
-  color: #000;
-}
-
-.two {
-  font-size: 18px;
-  font-weight: 500;
-  color: #000;
-  padding-bottom: 20px;
-}
-
-.three {
-  font-weight: 600;
-  color: aqua;
 }
 
 .form-doc {
@@ -376,5 +357,92 @@
   width: 100%;
   height: 100%;
   margin-bottom: 15px;
+}
+
+.form-docs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  margin: 30px auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 570px) {
+  .container {
+    width: 300px;
+    height: 100%;
+    margin: 30px auto;
+  }
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form__button {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .text {
+    padding: 30px 57px 5px 0px;
+  }
+  .tabs-nav {
+    padding-top: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .tabs-item {
+    width: 100%;
+    margin: 60px auto;
+  }
+  .tabs-nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .input {
+    width: 100%;
+  }
+  .operators-percent {
+    padding-right: 30px;
+    margin-left: 30px;
+  }
+  .cen-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cen {
+    margin-bottom: 15px;
+  }
+  .form-doc {
+    width: 100%;
+  }
+  .form-docs {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

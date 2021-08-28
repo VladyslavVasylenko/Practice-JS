@@ -75,28 +75,10 @@
 }
 
 // Calculator
-.button { 
-  background-color: white;
-  color: black;
-  font-size: 18px;
-  font-weight: 700;
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  transition: all ease 1s;
-  box-shadow: 5px 5px 5px 5px rgb(116, 116, 116);
-}
-
-.button:hover {
-  background-color: rgb(51, 163, 163);
-  color: white;
-}
-
-.button:active {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 2px rgb(116, 116, 116);
-  color: rgb(97, 177, 23);
-  transition: all ease 0.5s;
+.tabs { 
+  width: 320px;
+  height: 115px;
+  margin: 0 auto;
 }
 
 .tabs-item {
@@ -115,12 +97,6 @@
   padding: 30px 15px;
   border-top: 1px solid blue;
   border-bottom: 1px solid blue;
-}
-
-.tabs { 
-  width: 320px;
-  height: 115px;
-  margin: 0 auto;
 }
 
 .tabs-nav { 
@@ -196,14 +172,46 @@
   margin-left: -50px;
 }
 
-// others app
+.button { 
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all ease 1s;
+  box-shadow: 5px 5px 5px 5px rgb(116, 116, 116);
+}
+
+.button:hover {
+  background-color: rgb(51, 163, 163);
+  color: white;
+}
+
+.button:active {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px rgb(116, 116, 116);
+  color: rgb(97, 177, 23);
+  transition: all ease 0.5s;
+}
+
+// List string
 .output {
   width: 300px;
   margin: 30px auto;
 }
 
+.outpu__conteiner {
+  width: 320px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid rgb(43, 255, 0);
+}
 .input-search{
   width: 200px;
+  margin: 0 auto;
   border: none;
   border-bottom: 1px solid blue;
   background-color: white;
@@ -215,36 +223,11 @@
 }
 
 .list {
-  margin: 30px 0 30px 0;
+  margin: 30px 0 30px 13px;
+  padding: 10px;
   font-size: 18px;
   font-weight: 700;
   list-style-type: decimal;
-}
-
-// Table
-.table {
-  display: flex;
-  justify-content: center;
-  border: 1px solid rgb(179, 255, 0);
-  margin-bottom: 10px;
-}
-
-.one {
-  font-size: 18px;
-  font-weight: 500;
-  color: #000;
-}
-
-.two {
-  font-size: 18px;
-  font-weight: 500;
-  color: #000;
-  padding-bottom: 20px;
-}
-
-.three {
-  font-weight: 600;
-  color: aqua;
 }
 
 // Form - document
@@ -320,4 +303,85 @@
   width: 100%;
   height: 100%;
   margin-bottom: 15px;
+}
+
+// Fuel
+.form-docs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 30px auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 570px) {
+  // Learn
+  .container {
+    width: 300px;
+    height: 100%;
+    margin: 30px auto;
+  }
+
+  .form { 
+    flex-direction: column;
+  }
+
+  .form__button { 
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .text {
+    padding: 30px 57px 5px 0px;
+  }
+  
+
+  // Calculet
+  .tabs-nav { 
+    padding-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .tabs-item {
+    width: 100%;
+    margin: 60px auto;
+  }
+
+  .tabs-nav__item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .input { 
+    width: 100%;
+  }
+
+  .operators-percent {
+    padding-right: 30px;
+    margin-left: 30px;
+  }
+
+  .cen-md {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cen {
+    margin-bottom: 15px;
+  }
+
+  // Form-doc
+  .form-doc { 
+    width: 100%;
+  }
+
+  // Fuel
+  .form-docs {
+    width: 100%;
+  }
 }

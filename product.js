@@ -286,115 +286,144 @@ searchBtn.onclick = function() {
 
 // console.log(array.multBy(15));
 
-const z = {
-  let: 'red',
-  dev: 'blue',
-  some: 'Some',
-  funt: {
-    rudy: 'cat',
-    "name cat": 'Rudy',
-  },
-  run() {
-    console.log(`My ${this.funt.rudy} have name ${this.funt['name cat']}`);
-  },
-}
+// const z = {
+//   let: 'red',
+//   dev: 'blue',
+//   some: 'Some',
+//   funt: {
+//     rudy: 'cat',
+//     "name cat": 'Rudy',
+//   },
+//   run() {
+//     console.log(`My ${this.funt.rudy} have name ${this.funt['name cat']}`);
+//   },
+// }
 
-let d = Object.create(z);
+// let d = Object.create(z);
 
-d.izi = 'green';
-console.log(d);
-console.log(z);
+// d.izi = 'green';
+// console.log(d);
+// console.log(z);
 
-// for (let key in d) {
-//   console.log(key);
-//   console.log(d[key]);
+// // for (let key in d) {
+// //   console.log(key);
+// //   console.log(d[key]);
+// // };
+
+// d.funt.rudy = 'dog';
+// d.funt["name cat"] = 'Baks';
+
+// Object.assign(d, { dog: "dog", "name dog": "Baks", });
+
+// console.log(z);
+// console.log(d);
+// z.run();
+// d.run();
+
+// const userPerson = new Object({
+//   name: "Max",
+//   age: 25,
+//   greet: function() {
+//     console.log('Greet!');
+//   }
+// });
+
+// Object.prototype.sayHello = function() {
+//   console.log('Hello!');
+// }
+
+// console.log(userPerson);
+
+// const lena = Object.create(userPerson);
+// lena.name = 'Elena';
+// console.log(lena);
+// console.log(lena.age);
+
+// for (let key in lena) {
+//   console.log(key + ' - ' + lena[key]);
 // };
 
-d.funt.rudy = 'dog';
-d.funt["name cat"] = 'Baks';
+// function urlGenerator(domain) {
+//   return function(url) {
+//     return `https://${url}.${domain}`;
+//   }
+// }
 
-Object.assign(d, { dog: "dog", "name dog": "Baks", });
+// const comUrl = urlGenerator('com');
+// const ruUrl = urlGenerator('ru');
 
-console.log(z);
-console.log(d);
-z.run();
-d.run();
+// console.log(comUrl('google'));
+// console.log(ruUrl('vk'));
 
-const userPerson = new Object({
-  name: "Max",
-  age: 25,
-  greet: function() {
-    console.log('Greet!');
-  }
-});
+// function bind(context, fn) {
+//   return function(...args) {
+//     fn.apply(context, args);
+//   }
+// }
 
-Object.prototype.sayHello = function() {
-  console.log('Hello!');
-}
+// function cat() {
+//   console.log(`Cat: have name ${this.name}, age: ${this.age}, color: ${this.color}`);
+// }
 
-console.log(userPerson);
+// const catRudy = {
+//   name: 'Rudy',
+//   age: 12,
+//   color: 'orange'
+// };
 
-const lena = Object.create(userPerson);
-lena.name = 'Elena';
-console.log(lena);
-console.log(lena.age);
+// bind(catRudy, cat)();
 
-for (let key in lena) {
-  console.log(key + ' - ' + lena[key]);
-};
+// Method keys, values, entries
+// const u = {
+//   name: 'Pupkin',
+//   age: 33,
+//   profecion: "dev",
+//   salary: 10000,
+// }
 
-function urlGenerator(domain) {
-  return function(url) {
-    return `https://${url}.${domain}`;
-  }
-}
-
-const comUrl = urlGenerator('com');
-const ruUrl = urlGenerator('ru');
-
-console.log(comUrl('google'));
-console.log(ruUrl('vk'));
-
-function bind(context, fn) {
-  return function(...args) {
-    fn.apply(context, args);
-  }
-}
-
-function cat() {
-  console.log(`Cat: have name ${this.name}, age: ${this.age}, color: ${this.color}`);
-}
-
-const catRudy = {
-  name: 'Rudy',
-  age: 12,
-  color: 'orange'
-};
-
-bind(catRudy, cat)();
-
-const u = {
-  name: 'Pupkin',
-  age: 33,
-  profecion: "dev",
-  salary: 10000,
-}
-
-console.log(u);
+// console.log(u);
 
 // u.pasport = "vv667788";
-Object.defineProperty(u, 'pasport', {
-  value: "vv557799",
-  enumerable: true,
-})
+// Object.defineProperty(u, 'pasport', {
+//   value: "vv557799",
+//   enumerable: true,
+// })
 
-let keys = Object.keys(u);
-console.log(keys);
+// let keys = Object.keys(u);
+// console.log(keys);
 
-let values = Object.values(u);
-console.log(values);
+// let values = Object.values(u);
+// console.log(values);
 
-let entries = Object.entries(u);
-console.log(entries);
+// let entries = Object.entries(u);
+// console.log(entries);
 
-entries.map(([index, item]) => console.log(index, item));
+// entries.map(([index, item]) => console.log(index, item));
+
+// const object1 = {
+//   a: 'somestring',
+//   b: 42
+// };
+
+// for (const [key, value] of Object.entries(object1)) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// function bind(context, fn) {
+//   return function(...args) {
+//     fn.apply(context, args);
+//   }
+// }
+
+// function cat() {
+//   let be = document.getElementById('resultDoc');
+//   be.innerHTML = `<p class="text">This cat have name ${this.name}, age: ${this.age}, color ${this.color}.</p>`;
+// }
+
+// const catRudy = {
+//   name: 'Rudy',
+//   age: 12,
+//   color: 'orange'
+// };
+
+// bind(catRudy, cat)();
