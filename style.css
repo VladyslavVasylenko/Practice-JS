@@ -222,8 +222,8 @@
   cursor: pointer;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 4px 4px 4px 4px #747474;
+          box-shadow: 4px 4px 4px 4px #747474;
 }
 
 .button:hover {
