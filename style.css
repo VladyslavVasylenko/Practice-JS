@@ -426,7 +426,7 @@
     padding-right: 30px;
     margin-left: 30px;
   }
-  .cen-md {
+  .center-percent {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -435,7 +435,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .cen {
+  .center-input {
     margin-bottom: 15px;
   }
   .form-doc {

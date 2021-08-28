@@ -12,7 +12,7 @@ formDocs.addEventListener('submit', function (e) {
   let sums = mult * sumLitre.value;
   let sumsFloor =  sums.toFixed(2);
   if(spendFuel.value) {
-    amount.innerHTML = `<p class="text">Quantity fuel for ${wayKm.value} km. = ${mult} liters.</p>` +
+    amount.innerHTML = `<p class="text">Spends quantity fuel for ${wayKm.value} km. = ${mult} liters.</p>` +
     `<p class="text">Sum for ${mult} lt. = ${sumsFloor} hryvnia</p>`;
     formDocs.reset();
   }

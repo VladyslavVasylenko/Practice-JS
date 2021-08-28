@@ -409,21 +409,36 @@ searchBtn.onclick = function() {
 //   console.log(`${key}: ${value}`);
 // }
 
-// function bind(context, fn) {
-//   return function(...args) {
-//     fn.apply(context, args);
-//   }
-// }
+// My Bind function 
+function bind(context, fn) {
+  return function(...args) {
+    fn.apply(context, args);
+  }
+}
 
-// function cat() {
-//   let be = document.getElementById('resultDoc');
-//   be.innerHTML = `<p class="text">This cat have name ${this.name}, age: ${this.age}, color ${this.color}.</p>`;
-// }
+function cat() {
+  let be = document.getElementById('resultDoc');
+  be.innerHTML = `<p class="text">This cat have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} cat.</p>`;
+}
 
-// const catRudy = {
-//   name: 'Rudy',
-//   age: 12,
-//   color: 'orange'
-// };
+function dog() {
+  let be = document.getElementById('resultDocs');
+  be.innerHTML = `<p class="text">This dog have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} dog.</p>`;
+}
 
-// bind(catRudy, cat)();
+const catRudy = {
+  name: 'Rudy',
+  age: 12,
+  color: 'orange',
+  busy: 'the very busy',
+};
+
+const dogBaks = {
+  name: 'Baks',
+  age: 13,
+  color: 'black and white dots',
+  busy: 'the very busy, he the guard',
+};
+
+bind(catRudy, cat)();
+bind(dogBaks, dog)();
