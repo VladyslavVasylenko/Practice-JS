@@ -423,8 +423,11 @@
     width: 100%;
   }
   .operators-percent {
-    padding-right: 30px;
-    margin-left: 30px;
+    padding-right: 0;
+    margin-left: 0;
+    position: relative;
+    top: -35px;
+    left: 70px;
   }
   .center-percent {
     display: -webkit-box;
