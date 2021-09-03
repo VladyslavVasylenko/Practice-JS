@@ -485,3 +485,76 @@ bind(dogBaks, dog)();
 // }).catch(err => console.log('Error:', err))
 // .finally(() => console.log('Finally!'));
 
+// API XMLHttpRequest //
+const userAPI = 'https://jsonplaceholder.typicode.com/users';
+
+function sendRequest(method, url, body = null) {
+  return new Promise( (resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open(method, url); //get API
+    
+    xhr.responseType = 'json'; //parset
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.onload = () => {
+      if (xhr.status >= 400) {
+        console.error(xhr.response);
+      } else {
+        console.log(xhr.response);
+      }
+    }
+    
+    xhr.onerror = () => {
+      console.log(xhr.response);
+    }
+
+    xhr.send(JSON.stringify(body));
+  });
+}
+
+sendRequest( 'GET', userAPI)
+  .then( data => console.log(data))
+  .catch(err => console.log(err));
+
+const body = {
+  name: "Vlad",
+  age: 33,
+}
+
+sendRequest( 'POST', userAPI, body) //Send info for API
+  .then( data => console.log(data))
+  .catch(err => console.log(err));
+
+// Fetch
+function sendRequests(method, url, body) {
+  const headers = {
+    'Content-Type': 'application/json'
+  }
+
+  return fetch(url, {
+    method: method,
+    body: JSON.stringify(body),
+    headers: headers,
+  }).then( response => {
+    if(response.ok) {
+      return response.json()
+    }
+
+    return response.json().then( error => {
+      const e = new Error('Don`t work');
+      e.data = error;
+      throw e;
+    });
+  });
+}
+
+sendRequests( 'GET', userAPI)
+  .then( data => console.log(data))
+  .catch(err => console.log(err));
+
+sendRequests( 'POST', userAPI, body)
+  .then( data => console.log(data))
+  .catch(err => console.log(err));
+
+  
