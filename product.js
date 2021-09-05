@@ -305,10 +305,10 @@ searchBtn.onclick = function() {
 // console.log(d);
 // console.log(z);
 
-// // for (let key in d) {
-// //   console.log(key);
-// //   console.log(d[key]);
-// // };
+// for (let key in d) {
+//   console.log(key);
+//   console.log(d[key]);
+// };
 
 // d.funt.rudy = 'dog';
 // d.funt["name cat"] = 'Baks';
@@ -557,4 +557,101 @@ sendRequests( 'POST', userAPI, body)
   .then( data => console.log(data))
   .catch(err => console.log(err));
 
-  
+// Practice
+/*
+Primitive data types:
+Number (all number);
+String ('',"",``);
+Boolean (true / false);
+Null (Null);
+Undefined (undefined);
+Symbol (exclusive indicators);
+BigInt;
+
+Not primitive data type:
+Object (mutable data type);
+*/
+
+let userName = 'Vlad';
+
+if( userName === 'Vlad' || catRudy.age >= 40) {
+  console.log('Yes');
+} else if (userName === 'Olga' ||  catRudy.age >= 4) {
+  console.log("YES");
+} else {
+  console.log('No');
+}
+
+const products = [
+  'Underpants: 6.99',
+  'Socks: 5.99',
+  'T-shirt: 14.99',
+  'Trousers: 31.99',
+  'Shoes: 23.99',
+];
+
+// for (let i = 0; i < products.length; i++) {
+//   console.log(products[i]);
+// }
+
+// let i = 0;
+// while (i < products.length) {
+//   console.log(products[i]);
+//   i++;
+// }
+
+//To do list
+let addMessage = document.querySelector('.message');
+let addButton = document.querySelector('.add');
+let todoList = [];
+let todo = document.querySelector('.todo');
+
+if(localStorage.getItem('todo')) {
+  todoList = JSON.parse(localStorage.getItem('todo'));
+  displayMessages();
+}
+
+addButton.addEventListener('click', function() {
+  let newTodo = {
+    todo: addMessage.value,
+    checked: false,
+    important: false,
+  };
+
+  todoList.push(newTodo);
+  displayMessages();
+  localStorage.setItem('todo', JSON.stringify(todoList));
+});
+
+function displayMessages() {
+  let displayMessage = '';
+  todoList.forEach(function(item, i) {
+    displayMessage += `
+    <li>
+      <input type='checkbox' id='item${i}' ${item.checked ? 'checked' : ''}>
+      <label for='item_${i} class="${item.important ? 'important' : ''}>${item.todo}</label>
+    </li>`;
+    todo.innerHTML = displayMessage;
+  });
+}
+
+todo.addEventListener('change', function(event) {
+  let valueLabel = todo.querySelector('[for=' + event.target.getAttribute('id') + ']').innerHTML;
+  todoList.forEach(function(item) {
+    if(item.todo === valueLabel) {
+      item.checked = !item.checked;
+      localStorage.setItem('todo', JSON.stringify(todoList));
+    }
+  });
+});
+
+todo.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+  todoList.forEach(function(item){
+    if(item.todo === event.target.innerHTML) {
+      item.important = !item.important;
+      displayMessages();
+      localStorage.setItem('todo', JSON.stringify(todoList));
+    }
+  });
+});
