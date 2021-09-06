@@ -118,3 +118,7 @@ btnClick6.onclick = function(e) {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber9.value + '<i class="fas fa-percent size-icon"></i> from ' + userNumber10.value + ' <i class="fas fa-equals size-icon"></i> ' + division + '</b>' + '</p>';
   }
 }
+
+// user password validate
+user.password = '123456';
+console.log(user.validatePassword());
