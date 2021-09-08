@@ -410,38 +410,38 @@ searchBtn.onclick = function() {
 // }
 
 // My Bind function 
-function bind(context, fn) {
-  return function(...args) {
-    fn.apply(context, args);
-  }
-}
+// function bind(context, fn) {
+//   return function(...args) {
+//     fn.apply(context, args);
+//   }
+// }
 
-function cat() {
-  let be = document.getElementById('resultDoc');
-  be.innerHTML = `<p class="text">This cat have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} cat.</p>`;
-}
+// function cat() {
+//   let be = document.getElementById('resultDoc');
+//   be.innerHTML = `<p class="text">This cat have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} cat.</p>`;
+// }
 
-function dog() {
-  let be = document.getElementById('resultDocs');
-  be.innerHTML = `<p class="text">This dog have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} dog.</p>`;
-}
+// function dog() {
+//   let be = document.getElementById('resultDocs');
+//   be.innerHTML = `<p class="text">This dog have name ${this.name}, age: ${this.age}, color ${this.color}, he ${this.busy} dog.</p>`;
+// }
 
-const catRudy = {
-  name: 'Rudy',
-  age: 12,
-  color: 'orange',
-  busy: 'the very busy',
-};
+// const catRudy = {
+//   name: 'Rudy',
+//   age: 12,
+//   color: 'orange',
+//   busy: 'the very busy',
+// };
 
-const dogBaks = {
-  name: 'Baks',
-  age: 13,
-  color: 'black and white dots',
-  busy: 'the very busy, he the guard',
-};
+// const dogBaks = {
+//   name: 'Baks',
+//   age: 13,
+//   color: 'black and white dots',
+//   busy: 'the very busy, he the guard',
+// };
 
-bind(catRudy, cat)();
-bind(dogBaks, dog)();
+// bind(catRudy, cat)();
+// bind(dogBaks, dog)();
 
 // console.log('Request data ...');
 
@@ -486,76 +486,76 @@ bind(dogBaks, dog)();
 // .finally(() => console.log('Finally!'));
 
 // API XMLHttpRequest //
-const userAPI = 'https://jsonplaceholder.typicode.com/users';
+// const userAPI = 'https://jsonplaceholder.typicode.com/users';
 
-function sendRequest(method, url, body = null) {
-  return new Promise( (resolve, reject) => {
-    const xhr = new XMLHttpRequest();
+// function sendRequest(method, url, body = null) {
+//   return new Promise( (resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
 
-    xhr.open(method, url); //get API
+//     xhr.open(method, url); //get API
     
-    xhr.responseType = 'json'; //parset
-    xhr.setRequestHeader('Content-Type', 'application/json');
+//     xhr.responseType = 'json'; //parset
+//     xhr.setRequestHeader('Content-Type', 'application/json');
     
-    xhr.onload = () => {
-      if (xhr.status >= 400) {
-        console.error(xhr.response);
-      } else {
-        console.log(xhr.response);
-      }
-    }
+//     xhr.onload = () => {
+//       if (xhr.status >= 400) {
+//         console.error(xhr.response);
+//       } else {
+//         console.log(xhr.response);
+//       }
+//     }
     
-    xhr.onerror = () => {
-      console.log(xhr.response);
-    }
+//     xhr.onerror = () => {
+//       console.log(xhr.response);
+//     }
 
-    xhr.send(JSON.stringify(body));
-  });
-}
+//     xhr.send(JSON.stringify(body));
+//   });
+// }
 
-sendRequest( 'GET', userAPI)
-  .then( data => console.log(data))
-  .catch(err => console.log(err));
+// sendRequest( 'GET', userAPI)
+//   .then( data => console.log(data))
+//   .catch(err => console.log(err));
 
-const body = {
-  name: "Vlad",
-  age: 33,
-}
+// const body = {
+//   name: "Vlad",
+//   age: 33,
+// }
 
-sendRequest( 'POST', userAPI, body) //Send info for API
-  .then( data => console.log(data))
-  .catch(err => console.log(err));
+// sendRequest( 'POST', userAPI, body) //Send info for API
+//   .then( data => console.log(data))
+//   .catch(err => console.log(err));
 
-// Fetch
-function sendRequests(method, url, body) {
-  const headers = {
-    'Content-Type': 'application/json'
-  }
+// // Fetch
+// function sendRequests(method, url, body) {
+//   const headers = {
+//     'Content-Type': 'application/json'
+//   }
 
-  return fetch(url, {
-    method: method,
-    body: JSON.stringify(body),
-    headers: headers,
-  }).then( response => {
-    if(response.ok) {
-      return response.json()
-    }
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(body),
+//     headers: headers,
+//   }).then( response => {
+//     if(response.ok) {
+//       return response.json()
+//     }
 
-    return response.json().then( error => {
-      const e = new Error('Don`t work');
-      e.data = error;
-      throw e;
-    });
-  });
-}
+//     return response.json().then( error => {
+//       const e = new Error('Don`t work');
+//       e.data = error;
+//       throw e;
+//     });
+//   });
+// }
 
-sendRequests( 'GET', userAPI)
-  .then( data => console.log(data))
-  .catch(err => console.log(err));
+// sendRequests( 'GET', userAPI)
+//   .then( data => console.log(data))
+//   .catch(err => console.log(err));
 
-sendRequests( 'POST', userAPI, body)
-  .then( data => console.log(data))
-  .catch(err => console.log(err));
+// sendRequests( 'POST', userAPI, body)
+//   .then( data => console.log(data))
+//   .catch(err => console.log(err));
 
 // Practice
 /*
@@ -572,23 +572,23 @@ Not primitive data type:
 Object (mutable data type);
 */
 
-let userName = 'Vlad';
+// let userName = 'Vlad';
 
-if( userName === 'Vlad' || catRudy.age >= 40) {
-  console.log('Yes');
-} else if (userName === 'Olga' ||  catRudy.age >= 4) {
-  console.log("YES");
-} else {
-  console.log('No');
-}
+// if( userName === 'Vlad' || catRudy.age >= 40) {
+//   console.log('Yes');
+// } else if (userName === 'Olga' ||  catRudy.age >= 4) {
+//   console.log("YES");
+// } else {
+//   console.log('No');
+// }
 
-const products = [
-  'Underpants: 6.99',
-  'Socks: 5.99',
-  'T-shirt: 14.99',
-  'Trousers: 31.99',
-  'Shoes: 23.99',
-];
+// const products = [
+//   'Underpants: 6.99',
+//   'Socks: 5.99',
+//   'T-shirt: 14.99',
+//   'Trousers: 31.99',
+//   'Shoes: 23.99',
+// ];
 
 // for (let i = 0; i < products.length; i++) {
 //   console.log(products[i]);
@@ -599,59 +599,3 @@ const products = [
 //   console.log(products[i]);
 //   i++;
 // }
-
-//To do list
-let addMessage = document.querySelector('.message');
-let addButton = document.querySelector('.add');
-let todoList = [];
-let todo = document.querySelector('.todo');
-
-if(localStorage.getItem('todo')) {
-  todoList = JSON.parse(localStorage.getItem('todo'));
-  displayMessages();
-}
-
-addButton.addEventListener('click', function() {
-  let newTodo = {
-    todo: addMessage.value,
-    checked: false,
-    important: false,
-  };
-
-  todoList.push(newTodo);
-  displayMessages();
-  localStorage.setItem('todo', JSON.stringify(todoList));
-});
-
-function displayMessages() {
-  let displayMessage = '';
-  todoList.forEach(function(item, i) {
-    displayMessage += `
-    <li>
-      <input type='checkbox' id='item${i}' ${item.checked ? 'checked' : ''}>
-      <label for='item_${i} class="${item.important ? 'important' : ''}>${item.todo}</label>
-    </li>`;
-    todo.innerHTML = displayMessage;
-  });
-}
-
-todo.addEventListener('change', function(event) {
-  let valueLabel = todo.querySelector('[for=' + event.target.getAttribute('id') + ']').innerHTML;
-  todoList.forEach(function(item) {
-    if(item.todo === valueLabel) {
-      item.checked = !item.checked;
-      localStorage.setItem('todo', JSON.stringify(todoList));
-    }
-  });
-});
-
-todo.addEventListener('contextmenu', function(event) {
-  event.preventDefault();
-  todoList.forEach(function(item){
-    if(item.todo === event.target.innerHTML) {
-      item.important = !item.important;
-      displayMessages();
-      localStorage.setItem('todo', JSON.stringify(todoList));
-    }
-  });
-});

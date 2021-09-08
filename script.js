@@ -120,5 +120,5 @@ btnClick6.onclick = function(e) {
 }
 
 // user password validate
-user.password = '123456';
-console.log(user.validatePassword());
+// user.password = '123456';
+// console.log(user.validatePassword());
