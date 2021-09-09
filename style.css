@@ -375,6 +375,111 @@
   height: 100%;
 }
 
+.todo__container {
+  width: 500px;
+  margin: 50px auto;
+  -webkit-box-shadow: 5px 5px 5px 5px #747474;
+          box-shadow: 5px 5px 5px 5px #747474;
+  padding: 15px;
+}
+
+.todo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo__title {
+  text-align: center;
+  font-size: 24px;
+  padding: 30px 0;
+}
+
+.todo-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: aqua;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 3px 3px 3px 3px #747474;
+          box-shadow: 3px 3px 3px 3px #747474;
+}
+
+.todo-wrapper__button {
+  width: 90px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  -webkit-box-shadow: 3px 3px 3px 3px #747474;
+          box-shadow: 3px 3px 3px 3px #747474;
+  border: none;
+}
+
+.todo-wrapper__button:hover {
+  background-color: #61b117;
+  color: white;
+}
+
+.todo-wrapper__button:active {
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px #747474;
+          box-shadow: 2px 2px 2px #747474;
+  color: #61b117;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.deletion {
+  opacity: 0.5;
+  background-color: rgba(128, 128, 128, 0.527);
+}
+
+.todo-wrapper__input {
+  border: none;
+  margin-right: 15px;
+  font-size: 18px;
+  padding: 5px;
+  -webkit-box-shadow: 3px 3px 3px 3px #747474;
+          box-shadow: 3px 3px 3px 3px #747474;
+}
+
+.descripton {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.checkeds {
+  opacity: 0.5;
+  background: green;
+}
+
 @media screen and (max-width: 570px) {
   .container {
     width: 300px;
