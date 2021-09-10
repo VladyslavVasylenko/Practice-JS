@@ -14,7 +14,7 @@ function Task(description) {
   this.completed = false;
 }
 
-const createContant = (task, index) => {
+function createContant(task, index) {
   return ` 
   <div class='todo-item' ${task.completed ? 'checked' : ''}> 
     <div class="descripton">${task.description}</div>
@@ -27,13 +27,13 @@ const createContant = (task, index) => {
   `;
 }
 
-const filterTask = () => {
+function filterTask() {
   const activeTasks = tasks.length && tasks.filter(item => item.completed == false);
   const completedTasks = tasks.length && tasks.filter(item => item.completed == true);
   tasks = [ ...activeTasks, ...completedTasks];
 }
 
-function fillHtmlList () {
+function fillHtmlList() {
   todoTask.innerHTML = '';
   if(tasks.length > 0) {
     filterTask();
@@ -46,11 +46,11 @@ function fillHtmlList () {
 
 fillHtmlList();
 
-const updateLocal = () => {
+function updateLocal() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-const completeTask = (index) => {
+function completeTask(index) {
   tasks[index].completed = !tasks[index].completed;
   if(tasks[index].completed) {
     todoItemElem[index].classList.add('checked');
@@ -61,7 +61,7 @@ const completeTask = (index) => {
   fillHtmlList();
 }
 
-const deleteTask = (index) => {
+function deleteTask(index) {
   todoItemElem[index].classList.add('deletion');
   setTimeout(() => {
     tasks.splice(index, 1);
