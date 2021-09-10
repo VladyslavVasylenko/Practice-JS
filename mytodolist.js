@@ -1,9 +1,11 @@
-const todoBtn = document.querySelector('.todo-wrapper__button');
-const todoInput = document.querySelector('.todo-wrapper__input');
-const todoContent = document.querySelector('.todo-content');
+'use strict';
+
+const inputTDL = document.querySelector('.todo-form__input');
+const btnTDL = document.querySelector('.todo-form__btn');
+const todoTask = document.querySelector('.todo__task');
 
 let tasks;
-let todoItemElems = [];
+let todoItemElem = [];
 
 !localStorage.tasks ? tasks = [] : tasks = JSON.parse(localStorage.getItem('tasks'));
 
@@ -12,13 +14,13 @@ function Task(description) {
   this.completed = false;
 }
 
-const createTemplate = (task, index) => {
+const createContant = (task, index) => {
   return ` 
   <div class='todo-item' ${task.completed ? 'checked' : ''}> 
     <div class="descripton">${task.description}</div>
       <div class="todo-btn-block">
-        <input onclick='completeTask(${index})' class='btn-complete' type="checkbox" ${task.completed ? 'checked' : ''}>
-        <button onclick='deleteTask(${index})' class='btn-delete'>Delete</button>
+        <input class='btn-complete' onclick='completeTask(${index})' type="checkbox" ${task.completed ? 'checked' : ''}>
+        <button class='btn-delete' onclick='deleteTask(${index})'>Delete</button>
       </div>
     </div>
   </div>
@@ -31,14 +33,14 @@ const filterTask = () => {
   tasks = [ ...activeTasks, ...completedTasks];
 }
 
-const fillHtmlList = () => {
-  todoContent.innerHTML = '';
+function fillHtmlList () {
+  todoTask.innerHTML = '';
   if(tasks.length > 0) {
     filterTask();
     tasks.forEach((item, index) => {
-      todoContent.innerHTML += createTemplate(item, index);
+      todoTask.innerHTML += createContant(item, index);
     });
-    todoItemElems = document.querySelectorAll('.todo-item');
+    todoItemElem = document.querySelectorAll('.todo-item');
   }
 }
 
@@ -51,16 +53,16 @@ const updateLocal = () => {
 const completeTask = (index) => {
   tasks[index].completed = !tasks[index].completed;
   if(tasks[index].completed) {
-    todoItemElems[index].classList.add('checkeds');
+    todoItemElem[index].classList.add('checked');
   } else{
-    todoItemElems[index].classList.remove('checkeds');
+    todoItemElem[index].classList.remove('checked');
   }
   updateLocal();
   fillHtmlList();
 }
 
 const deleteTask = (index) => {
-  todoItemElems[index].classList.add('deletion');
+  todoItemElem[index].classList.add('deletion');
   setTimeout(() => {
     tasks.splice(index, 1);
     updateLocal();
@@ -68,11 +70,11 @@ const deleteTask = (index) => {
   }, 500)
 }
 
-todoBtn.addEventListener('click', () => {
-  if(todoInput.value) {
-    tasks.push(new Task(todoInput.value));
+btnTDL.addEventListener('click', () => {
+  if(inputTDL.value) {
+    tasks.push(new Task(inputTDL.value));
   }
   updateLocal();
   fillHtmlList();
-  todoInput.value = '';
+  inputTDL.value = '';
 });
