@@ -599,3 +599,11 @@ Object (mutable data type);
 //   console.log(products[i]);
 //   i++;
 // }
+
+function Cat(color, name) {
+  this.color = color;
+  this.name = name;
+}
+
+const cat = new Cat('Rudy', 'Rudy');
+console.log(cat);

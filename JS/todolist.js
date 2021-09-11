@@ -1,3 +1,5 @@
+'use stict';
+
 const todoBtn = document.querySelector('.todo-wrapper__button');
 const todoInput = document.querySelector('.todo-wrapper__input');
 const todoContent = document.querySelector('.todo-content');
@@ -51,9 +53,9 @@ const updateLocal = () => {
 const completeTask = (index) => {
   tasks[index].completed = !tasks[index].completed;
   if(tasks[index].completed) {
-    todoItemElems[index].classList.add('checkeds');
+    todoItemElems[index].classList.add('checked');
   } else{
-    todoItemElems[index].classList.remove('checkeds');
+    todoItemElems[index].classList.remove('checked');
   }
   updateLocal();
   fillHtmlList();
