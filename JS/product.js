@@ -644,7 +644,7 @@ const delay = (ms) => {
   return new Promise(r => setTimeout(() => r(), ms));
 }
 
-const url = 'https://jsonplaceholder.typicode.com/todos?userid=1';
+const url = 'https://jsonplaceholder.typicode.com/todos';
 
 async function fetchAsyncTodos() {
   console.log('Started fetch');
