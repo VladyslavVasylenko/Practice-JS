@@ -600,10 +600,62 @@ Object (mutable data type);
 //   i++;
 // }
 
-function Cat(color, name) {
-  this.color = color;
-  this.name = name;
+// Async/Await //
+// const fetchData = () => Promise.resolve({
+//   data: ['Vlad', 'Max', 'Olga']
+// });
+
+// const getNamesData = async () => {
+//   console.log(await fetchData());
+//   return 'done';
+// }
+
+// getNamesData();
+
+// console.log(getNamesData());
+
+// async function f1() {
+//   const res = await fetch('test.php?d=1')
+//   return res.text();
+// }
+
+// async function f2() {
+//   const res = await fetch('php?d=2')
+//   return res.text();
+// }
+
+// async function f3() {
+//   const res = await fetch('php?d=3')
+//   return res.text();
+// }
+
+// async function go() {
+//   let a = await f1();
+//   console.log(a);
+//   let b = await f2();
+//   console.log(b);
+//   let c = await f3();
+//   console.log(c);
+// }
+
+// go();
+
+const delay = (ms) => {
+  return new Promise(r => setTimeout(() => r(), ms));
 }
 
-const cat = new Cat('Rudy', 'Rudy');
-console.log(cat);
+const url = 'https://jsonplaceholder.typicode.com/todos?userid=1';
+
+async function fetchAsyncTodos() {
+  console.log('Started fetch');
+  try {
+    await delay(2000);
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log('Data', data);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+fetchAsyncTodos();
