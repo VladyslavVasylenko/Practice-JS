@@ -52,11 +52,13 @@ function updateLocal() {
 
 function completeTask(index) {
   tasks[index].completed = !tasks[index].completed;
+
   if(tasks[index].completed) {
-    todoItemElem[index].classList.add('checkeds');
-  } else{
-    todoItemElem[index].classList.remove('checkeds');
+    todoItemElem[index].classList.add('checked');
+  } else {
+    todoItemElem[index].classList.remove('checked');
   }
+  
   updateLocal();
   fillHtmlList();
 }

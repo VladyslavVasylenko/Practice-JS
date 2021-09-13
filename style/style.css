@@ -10,8 +10,8 @@
   width: 500px;
   height: 100%;
   margin: 30px auto;
-  -webkit-box-shadow: 5px 5px 5px 5px #afafaf;
-          box-shadow: 5px 5px 5px 5px #afafaf;
+  -webkit-box-shadow: 0px 0px 10px #747474;
+          box-shadow: 0px 0px 10px #747474;
   padding: 30px;
 }
 
@@ -51,20 +51,19 @@
   cursor: pointer;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 5px 5px 15px #747474;
+          box-shadow: 5px 5px 15px #747474;
 }
 
 .form__button:hover {
   background-color: #33a3a3;
   color: white;
-  text-shadow: 7px -5px black;
 }
 
 .form__button:active {
   background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #747474;
-          box-shadow: 2px 2px 2px #747474;
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
   color: #61b117;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -95,8 +94,8 @@
   width: 500px;
   height: 100%;
   margin: 30px auto;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 0px 0px 10px #747474;
+          box-shadow: 0px 0px 10px #747474;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,8 +165,8 @@
   width: 300px;
   height: 100%;
   margin: 30px auto;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 0px 0px 10px #747474;
+          box-shadow: 0px 0px 10px #747474;
   padding-bottom: 30px;
 }
 
@@ -225,8 +224,8 @@
   cursor: pointer;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 4px 4px 4px 4px #747474;
-          box-shadow: 4px 4px 4px 4px #747474;
+  -webkit-box-shadow: 4px 4px 10px #747474;
+          box-shadow: 4px 4px 10px #747474;
 }
 
 .button:hover {
@@ -236,8 +235,8 @@
 
 .button:active {
   background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #747474;
-          box-shadow: 2px 2px 2px #747474;
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
   color: #61b117;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -316,8 +315,8 @@
   cursor: pointer;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 5px 5px 10px #747474;
+          box-shadow: 5px 5px 10px #747474;
   border: none;
 }
 
@@ -328,8 +327,8 @@
 
 .form-doc__btn:active {
   background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #747474;
-          box-shadow: 2px 2px 2px #747474;
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
   color: #61b117;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -381,8 +380,8 @@
 .todo__container {
   width: 500px;
   margin: 50px auto;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 0px 0px 10px #747474;
+          box-shadow: 0px 0px 10px #747474;
   padding: 15px;
 }
 
@@ -427,8 +426,8 @@
   background-color: aqua;
   padding: 10px;
   margin-bottom: 10px;
-  -webkit-box-shadow: 3px 3px 3px 3px #747474;
-          box-shadow: 3px 3px 3px 3px #747474;
+  -webkit-box-shadow: 3px 3px 10px #747474;
+          box-shadow: 3px 3px 10px #747474;
 }
 
 .todo-wrapper__button {
@@ -440,8 +439,8 @@
   cursor: pointer;
   -webkit-transition: all ease 1s;
   transition: all ease 1s;
-  -webkit-box-shadow: 3px 3px 3px 3px #747474;
-          box-shadow: 3px 3px 3px 3px #747474;
+  -webkit-box-shadow: 3px 3px 10px #747474;
+          box-shadow: 3px 3px 10px #747474;
   border: none;
 }
 
@@ -452,8 +451,8 @@
 
 .todo-wrapper__button:active {
   background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #747474;
-          box-shadow: 2px 2px 2px #747474;
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
   color: #61b117;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -463,6 +462,40 @@
   background-color: rgba(0, 255, 255, 0.603);
   -webkit-animation: opacity 1s ease-out;
           animation: opacity 1s ease-out;
+}
+
+.container-hero {
+  max-width: 700px;
+  margin: 15px auto;
+  background: #ffffff;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+
+.image-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.img {
+  max-width: 100px;
+  height: 100%;
+}
+
+.img:hover {
+  cursor: pointer;
+}
+
+.active {
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
 }
 
 @-webkit-keyframes opacity {
@@ -488,8 +521,8 @@
   margin-right: 15px;
   font-size: 18px;
   padding: 5px;
-  -webkit-box-shadow: 3px 3px 3px 3px #747474;
-          box-shadow: 3px 3px 3px 3px #747474;
+  -webkit-box-shadow: 3px 3px 3px #838383;
+          box-shadow: 3px 3px 3px #838383;
 }
 
 .descripton {
@@ -506,8 +539,8 @@
   width: 300px;
   height: 100%;
   margin: 30px auto;
-  -webkit-box-shadow: 5px 5px 5px 5px #747474;
-          box-shadow: 5px 5px 5px 5px #747474;
+  -webkit-box-shadow: 0px 0px 10px #747474;
+          box-shadow: 0px 0px 10px #747474;
   padding: 30px;
   text-align: center;
 }

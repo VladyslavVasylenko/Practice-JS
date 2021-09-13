@@ -20,16 +20,15 @@
   width: 350px;
   height: 100%;
   margin: 30px auto;
-  box-shadow: 5px 5px 5px 5px rgb(116, 116, 116);
-  padding: 30px;
+  box-shadow: 0 0 10px #000;
 }
 
 .todo__container { 
-  width: 300px;
+  width: 330px;
   height: 100%;
   margin: 30px auto;
-  box-shadow: 1px 3px 3px 3px rgb(116, 116, 116);
-  padding: 30px;
+  box-shadow: 0 0 10px #000;
+  padding: 15px;
 }
 
 .todo__title { 
@@ -43,7 +42,7 @@
 
 .todo-form__input { 
   border: none;
-  box-shadow: 2px 2px 2px 2px rgb(116, 116, 116);
+  box-shadow: 0 0 10px #000;
   margin-right: 2px;
   padding: 2px;
 }
@@ -51,23 +50,25 @@
 .todo-form__btn { 
   background-color: rgb(255, 255, 255);
   border: none;
-  box-shadow: 3px 3px 3px 3px rgb(116, 116, 116);
+  box-shadow: 0 0 10px #000;
   padding: 2px 5px;
   color: #000000;
   font-weight: 700;
+  font-size: 20px;
   transition: all ease 0.5s;
 }
 
 .todo-form__btn:hover {
   background-color: rgba(60, 185, 10, 0.685);
-  box-shadow: 3px 3px 3px 3px rgb(116, 116, 116);
   color: #ffffff;
+  text-shadow: 3px -5px rgb(163, 162, 162);
 }
 
 .todo-form__btn:active {
   background-color: rgba(255, 255, 255, 0.685);
-  box-shadow: 2px 2px 2px 2px rgb(116, 116, 116);
+  box-shadow: 0 0 3px #000;
   color: rgba(60, 185, 10, 0.685);
+  text-shadow: 0px 0px rgb(163, 162, 162);
 }
 
 .todo__task { 
@@ -92,7 +93,7 @@
   }
 }
 
-.todo-item.checked {
+.checked {
   opacity: 0.5;
   background: green;
 }
