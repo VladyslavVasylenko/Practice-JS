@@ -20,6 +20,7 @@ btnClick.onclick = function(e) {
   } else {
     document.querySelector('.result').innerHTML = '<p class="text">Sorry we don`t have information.</p>';
   }
+  input.value = '';
 }
 
 

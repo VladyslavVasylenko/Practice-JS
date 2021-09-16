@@ -170,3 +170,21 @@ function showInfo(event) {
 
   event.target.classList.add('active');
 }
+
+// set
+
+const products = [ 
+  "color: 'red'",
+  "name: 'Reg'",
+  "famel: 'men'"
+];
+
+let aras = new WeakSet();
+aras.add(products);
+console.log(aras);
+aras.add(images);
+console.log(aras);
+aras.has(images);
+if(aras.has(images) == true) {
+  console.log(images);
+}
