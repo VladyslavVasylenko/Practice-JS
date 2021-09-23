@@ -188,3 +188,13 @@ aras.has(images);
 if(aras.has(images) == true) {
   console.log(images);
 }
+
+let s = 10000;
+let result;
+
+document.querySelector('#button').addEventListener('click', () => {
+  result = s.toString().split('').map(item => +item);
+  result.shift();
+  s++;
+  console.log(result);
+});
