@@ -68,7 +68,6 @@
   color: #61b117;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  text-shadow: 0px 0px;
 }
 
 .result {
@@ -634,5 +633,103 @@
   .form-docs {
     width: 100%;
   }
+}
+
+.zodiac-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.zodiac__title {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-bottom: 3px double rgba(0, 0, 0, 0.616);
+}
+
+.zod {
+  max-width: 300px;
+  height: 100%;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.zodiac__titles {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.zodiac__inp-day {
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.zodiac__inp-month {
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.zodiac__btn {
+  width: 100px;
+  margin: 30px auto;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #96969600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
+}
+
+.zodiac__btn:hover {
+  -webkit-box-shadow: 0px 0px 15px #747474;
+          box-shadow: 0px 0px 15px #747474;
+}
+
+.zodiac__btn:active {
+  -webkit-box-shadow: 0px 0px 5px #747474;
+          box-shadow: 0px 0px 5px #747474;
+}
+
+.zodiac {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=style.css.map */
