@@ -1,4 +1,5 @@
 const zodiac = document.querySelector('.zodiac');
+const formZod = document.querySelector('.zod');
 
 document.querySelector('.zodiac__btn').onclick = (event) => {
   event.preventDefault();
@@ -98,5 +99,5 @@ document.querySelector('.zodiac__btn').onclick = (event) => {
   } else {
     zodiac.innerHTML = `<p>Something wrong!</p>`;
   }
+  // formZod.reset();
 }
-

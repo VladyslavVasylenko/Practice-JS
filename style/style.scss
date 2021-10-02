@@ -444,6 +444,9 @@
   box-shadow: 0px 0px 10px rgb(116, 116, 116);
   padding: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .link {
@@ -535,80 +538,50 @@
   }
 }
 
-// Zodiac
-.zodiac-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
-.zodiac__title { 
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  margin-top: 20px;
+.grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  grid-gap: 10px;
   padding: 10px;
-  border-bottom: 3px double rgba(0, 0, 0, 0.616);
 }
 
-.zod { 
-  max-width: 300px;
-  height: 100%;
-  margin: 30px auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.grid-item {
+  padding: .6em;
 }
 
-.zodiac__titles {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 5px;
+.grid-item:nth-of-type(even) {
+  background: #726464;
 }
 
-.zodiac__inp-day { 
-  width: 100%;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-  border-bottom: 1px solid black;
+.grid-item:nth-of-type(odd) {
+  background: #474747;
 }
 
-.zodiac__inp-month { 
-  width: 100%;
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-  border-bottom: 1px solid black;
+//
+.zod__btn { 
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 40px;
+  padding: 3px 5px;
+  border: 1px solid black;
+  outline: 2px solid black;
+  background-color: #ffffff;
+  outline-offset: 2px;
+  transition: 1s all ease;
 }
 
-.zodiac__btn { 
-  width: 100px;
-  margin: 30px auto;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 18px;
-  background-color: #96969600;
-  border: none;
-  cursor: pointer;
-  transition: all 1s ease-out;
-  box-shadow: 0px 0px 5px rgb(116, 116, 116);
+.zod__btn:hover {
+  border: 1px solid blue;
+  outline: 2px solid blue;
+  outline-offset: 2px;
+  background-color: rgb(161, 161, 207);
 }
 
-.zodiac__btn:hover {
-  box-shadow: 0px 0px 15px rgb(116, 116, 116);
-}
-
-.zodiac__btn:active{
-  box-shadow: 0px 0px 5px rgb(116, 116, 116);
-}
-
-.zodiac {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 30px;
+.zod__link { 
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
 }

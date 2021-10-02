@@ -123,3 +123,73 @@ btnClick6.onclick = function(e) {
 // user password validate
 // user.password = '123456';
 // console.log(user.validatePassword());
+
+//  Promise - how work.
+console.log('Request data...');
+
+const pr = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('Preparing data...');
+
+    const backendData = {
+      server: 'aws',
+      port: 2000,
+      status: 'working',
+    }
+    resolve(backendData);
+  }, 2000);
+});
+
+pr.then((data) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      data.modifieds = true;
+      resolve(data);
+    }, 2000);
+  });
+})
+  .then(clientData => {
+    console.log('Data recived', clientData);
+  })
+  .catch(err => console.log('Error: ', err))
+  .finally(() => console.log('Finally'));
+
+let tr = {
+  green: 'apple',
+  red: 'tomato',
+  yeallow: 'lemon',
+  allFrute: function () {
+    return this.green + ' ' + this.red + ' ' + this.yeallow;
+  }
+}
+
+console.log(tr.allFrute());
+
+const w = 'sertificate';
+const out1 = document.querySelector('.out1');
+
+document.querySelector('.r1').addEventListener('input',
+function() {
+  const num = +this.value;
+  const n = num % 10;
+  if(num === 0) {
+    out1.textContent = '';
+    return;
+  }
+  if(num >= 11 && num <= 20) {
+    out1.textContent = `Get ${num} ${w}s`;
+    return;
+  }
+  if(n === 1) {
+    out1.textContent = `Get ${num} ${w}`;
+    return;
+  }
+  if(n >= 2 && n <= 4) {
+    out1.textContent = `Get ${num} ${w}a`;
+    return;
+  }
+  if((n >= 5 && n <= 9) || n === 0) {
+    out1.textContent = `Get ${num} ${w}of`;
+    return;
+  }
+});
