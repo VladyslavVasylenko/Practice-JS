@@ -1,4 +1,4 @@
-'use stict';
+'use strict';
 
 const todoBtn = document.querySelector('.todo-wrapper__button');
 const todoInput = document.querySelector('.todo-wrapper__input');
@@ -16,11 +16,11 @@ function Task(description) {
 
 const createTemplate = (task, index) => {
   return ` 
-  <div class='todo-item' ${task.completed ? 'checked' : ''}> 
+  <div class="todo-item ${task.completed ? 'checked' : ''}"> 
     <div class="descripton">${task.description}</div>
       <div class="todo-btn-block">
-        <input onclick='completeTask(${index})' class='btn-complete' type="checkbox" ${task.completed ? 'checked' : ''}>
-        <button onclick='deleteTask(${index})' class='btn-delete'>Delete</button>
+        <input onclick="completeTask(${index})" class="btn-complete" type="checkbox" ${task.completed ? 'checked' : ''}>
+        <button onclick="deleteTask(${index})" class="btn-delete">Delete</button>
       </div>
     </div>
   </div>

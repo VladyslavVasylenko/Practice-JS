@@ -16,7 +16,7 @@ function Task(description) {
 
 function createContant(task, index) {
   return ` 
-  <div class='todo-item' ${task.completed ? 'checked' : ''}> 
+  <div class="todo-item ${task.completed ? 'checked' : ''}"> 
     <div class="descripton">${task.description}</div>
       <div class="todo-btn-block">
         <input class='btn-complete' onclick='completeTask(${index})' type="checkbox" ${task.completed ? 'checked' : ''}>
@@ -28,18 +28,22 @@ function createContant(task, index) {
 }
 
 function filterTask() {
-  const activeTasks = tasks.length && tasks.filter(item => item.completed == false);
-  const completedTasks = tasks.length && tasks.filter(item => item.completed == true);
+  const activeTasks = tasks.length && tasks.filter(item => !item.completed);
+  const completedTasks = tasks.length && tasks.filter(item => item.completed);
+
   tasks = [ ...activeTasks, ...completedTasks];
 }
 
 function fillHtmlList() {
   todoTask.innerHTML = '';
+
   if(tasks.length > 0) {
     filterTask();
+
     tasks.forEach((item, index) => {
       todoTask.innerHTML += createContant(item, index);
     });
+
     todoItemElem = document.querySelectorAll('.todo-item');
   }
 }
@@ -65,6 +69,7 @@ function completeTask(index) {
 
 function deleteTask(index) {
   todoItemElem[index].classList.add('deletion');
+
   setTimeout(() => {
     tasks.splice(index, 1);
     updateLocal();
@@ -76,7 +81,9 @@ btnTDL.addEventListener('click', () => {
   if(inputTDL.value) {
     tasks.push(new Task(inputTDL.value));
   }
+  
   updateLocal();
   fillHtmlList();
+
   inputTDL.value = '';
 });

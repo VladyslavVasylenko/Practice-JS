@@ -99,5 +99,5 @@ document.querySelector('.zodiac__btn').onclick = (event) => {
   } else {
     zodiac.innerHTML = `<p>Something wrong!</p>`;
   }
-  // formZod.reset();
+  formZod.reset();
 }
