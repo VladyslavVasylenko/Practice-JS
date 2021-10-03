@@ -19,8 +19,8 @@ function createContant(task, index) {
   <div class="todo-item ${task.completed ? 'checked' : ''}"> 
     <div class="descripton">${task.description}</div>
       <div class="todo-btn-block">
-        <input class='btn-complete' onclick='completeTask(${index})' type="checkbox" ${task.completed ? 'checked' : ''}>
-        <button class='btn-delete' onclick='deleteTask(${index})'>Delete</button>
+        <input class="btn-complete" onclick='completeTask(${index})' type="checkbox" ${task.completed ? 'checked' : ''}>
+        <button class="btn-delete" onclick='deleteTask(${index})'>Delete</button>
       </div>
     </div>
   </div>
