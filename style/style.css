@@ -15,6 +15,12 @@
   padding: 30px;
 }
 
+.title__menu {
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
 .title {
   color: #000;
   text-align: center;
@@ -541,7 +547,7 @@
   margin: 30px auto;
   -webkit-box-shadow: 0px 0px 10px #747474;
           box-shadow: 0px 0px 10px #747474;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -555,6 +561,10 @@
           justify-content: center;
 }
 
+.link__container {
+  padding-top: 15px;
+}
+
 .link {
   font-size: 18px;
   text-decoration: none;
@@ -563,7 +573,8 @@
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   letter-spacing: 1px;
-  text-shadow: 5px 2px #a1a1a1;
+  text-transform: uppercase;
+  text-shadow: 3px -3px 3px #8f8f8f;
 }
 
 .link:hover {
@@ -669,7 +680,7 @@
 .zod__btn {
   width: 80px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
   border-radius: 40px;
   padding: 3px 5px;
   border: 1px solid black;

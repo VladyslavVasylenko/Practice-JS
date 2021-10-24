@@ -1,0 +1,88 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+body{
+  background-color: black;
+}
+
+.container { 
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.site-header { 
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+  background: url('../images/hel.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.site-header h1 { 
+  font-size: 4rem;
+  position: relative;
+  padding: 5px;
+  background: rgba(184, 184, 184, 0.349);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.site-header-bg { 
+  background: url('../images/bg_1.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: -30%;
+  background-repeat: no-repeat;
+  animation-name: header-animation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.spider { 
+  width: 90px;
+  height: 245px;
+  position: absolute;
+  background-image: url(../images/spider.png);
+  background-size: contain;
+  right: 200px;
+  top: -300px;
+  cursor: pointer;
+}
+
+.spider-animation {
+  animation-name: header-animation-spider;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes header-animation {
+  0% {
+    background-position-y: -30%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+
+@keyframes header-animation-spider {
+  0% {
+    top: -300%;
+  }
+  60% {
+    top: -85px;
+  }
+  70% {
+    top: -130px;
+  }
+  80% {
+    top: -100px;
+  }
+  100% {
+    top: -115px;
+  }
+}
