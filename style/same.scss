@@ -32,13 +32,9 @@
   padding-top: 30px;
 }
 
-.form__first-block { 
+// .form__first-block { }
 
-}
-
-.form__second-block { 
-
-}
+// .form__second-block { }
 
 .form-btn { 
   width: 130px;
@@ -62,4 +58,11 @@
 
 .form-btn:active {
   box-shadow: 0 0 5px black;
+}
+
+.identify {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding-top: 3%;
 }
