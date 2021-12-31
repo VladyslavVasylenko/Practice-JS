@@ -4,10 +4,10 @@ var style = document.createElement('style');
         position: fixed;
         top: -20px;
         z-index: 1;
-        }
+    }
     .sf-snow-anim {
         top: 110%;
-        }
+    }
     `;
 document.head.appendChild(style);
 
@@ -130,13 +130,13 @@ Licensed Under MIT
             }, elemDelay);
         }
 
-        if (device.mobile() || device.tablet() || Modernizr.touch || $('html').hasClass('no-csstransitions')) {} else if (device.desktop()) {
+        // if (device.mobile() || device.tablet() || Modernizr.touch || $('html').hasClass('no-csstransitions')) {} else if (device.desktop()) {
             activateAnim();
 
             snowInterval = setInterval(function(){
-              activateAnim();
+                activateAnim();
             }, +elemDelay + +elemSpeed);
-        }
+        // }
 
         if (s.timeout != 0) {
             setTimeout(function(){
@@ -153,15 +153,13 @@ Licensed Under MIT
 
 }( jQuery ));
 
-
-
 jQuery(document).ready(function($){
 $(document).snowFlurry({
-maxSize: 10,
-numberOfFlakes: 200,
-minSpeed: 10,
-maxSpeed: 20,
-color: '#fff',
-timeout: 0
-});
+        maxSize: 10,
+        numberOfFlakes: 200,
+        minSpeed: 10,
+        maxSpeed: 20,
+        color: '#fff',
+        timeout: 0
+    });
 });
