@@ -156,7 +156,7 @@ Licensed Under MIT
 jQuery(document).ready(function($){
 $(document).snowFlurry({
         maxSize: 10,
-        numberOfFlakes: 200,
+        numberOfFlakes: 300,
         minSpeed: 10,
         maxSpeed: 20,
         color: '#fff',
