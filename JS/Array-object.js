@@ -1,6 +1,6 @@
 'use strict';
 
-const words = ['read', 'old', 'lover', 'fructs', 'me'];
+const words = ['read', 'old', 'lover', 'fructs', 'me', 'i'];
 
 let wordsMap = words.map((item) => {
   return {
@@ -10,3 +10,7 @@ let wordsMap = words.map((item) => {
 });
 
 console.log(wordsMap);
+
+let result = words.filter(word => word.length < 4);
+
+console.log(result);
