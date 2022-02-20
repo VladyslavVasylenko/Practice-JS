@@ -20,10 +20,10 @@ const userSurname = 'Vasylenko';
 
 function person(name, sureName) {
   if(name !== '' || sureName !== '') {
-    console.log(name + " " + sureName);
-  } else{
-    console.log(' ');
+    return name + " " + sureName;
+  } else {
+    return '';
   }
 }
 
-person(userName, userSurname);
+console.log(person(userName, userSurname));
