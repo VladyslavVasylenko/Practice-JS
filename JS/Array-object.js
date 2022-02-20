@@ -1,13 +1,12 @@
 'use strict';
 
-const arrs = ['read', 'old', 'lover', 'fructs', 'me'];
+const words = ['read', 'old', 'lover', 'fructs', 'me'];
 
-let ar = arrs.map((item) => {
-  return item + ': ' + item.length;
+let wordsMap = words.map((item) => {
+  return {
+    key: item,
+    charCount: item.length,
+  };
 });
 
-let oo = {};
-Object.assign(oo, arrs);
-
-console.log(ar);
-console.log(oo);
+console.log(wordsMap);
