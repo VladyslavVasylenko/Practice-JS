@@ -2,10 +2,10 @@
 
 const words = ['read', 'old', 'lover', 'fructs', 'me', 'i'];
 
-let wordsMap = words.map((item) => {
+let wordsMap = words.map((word) => {
   return {
-    key: item,
-    charCount: item.length,
+    key: word,
+    charCount: word.length,
   };
 });
 
