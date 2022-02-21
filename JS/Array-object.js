@@ -19,8 +19,12 @@ const userName = 'Vlad';
 const userSurname = 'Vasylenko';
 
 function person(name, sureName) {
-  if(name !== '' || sureName !== '') {
-    return name + " " + sureName;
+  if(name !== '' && sureName !== '') {
+    return name + ' ' + sureName;
+  } else if(name == ''){
+    return sureName;
+  } else if(sureName == ''){
+    return name;
   } else {
     return '';
   }
