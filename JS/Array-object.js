@@ -31,3 +31,18 @@ function person(name, sureName) {
 }
 
 console.log(person(userName, userSurname));
+
+function person2(name, sureName) {
+  switch(name, sureName){
+    case name && sureName:
+      return name + ' ' + sureName;
+    case !name && sureName:
+      return sureName;
+    case name && !sureName:
+      return name;
+    default:
+      return 'Oleg Pars';
+  }
+}
+
+console.log(person2(userName, userSurname));
