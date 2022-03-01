@@ -9,14 +9,14 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background: url(/images/beng.jpg) center center no-repeat;
 }
 
 .qustion {
   width: 300px;
   height: 100%;
-  margin: 30px auto;
-  background-color: aqua;
+  margin: 0 auto;
+  margin-top: 18%;
   padding-bottom: 30px;
   box-shadow: 0 0 10px black;
 }
@@ -45,6 +45,22 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px black;
   border: none;
+  padding-left: 10px;
+}
+
+.form__input:focus {
+  border: none;
+  box-shadow: 0 0 20px black;
+}
+
+.form__input:active {
+  border: none;
+  box-shadow: 0 0 20px black;
+}
+
+.form__input:hover {
+  border: none;
+  box-shadow: 0 0 20px black;
 }
 
 .form__btn { 
@@ -56,7 +72,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  background-color: rgb(119, 119, 119);
+  background-color: rgba(177, 2, 2, 0);
   box-shadow: 0 0 10px black;
   cursor: pointer;
   border: none;
@@ -74,4 +90,18 @@ body {
   background-color: rgb(47, 148, 0);
   box-shadow: 0 0 5px black;
   color: blue;
+}
+
+.answer {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  box-shadow: 0 0 10px black;
+  padding: 10px;
 }
