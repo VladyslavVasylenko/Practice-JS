@@ -5,6 +5,7 @@ const answer = document.querySelector('.answer');
 
 button.addEventListener('click', function(e) {
   e.preventDefault();
+  
   if (input.value == 'buy' || input.value == 'Buy') {
     answer.innerHTML = '<p>Buy <br> Bought - (second form PAST SIMPLE) <br> Bought - (three form PAST SIMPLE) <br> перевод - покупать.</p>';
   } else if (input.value == 'beat' || input.value == 'Beat') {
@@ -14,5 +15,6 @@ button.addEventListener('click', function(e) {
   } else {
     answer.innerHTML = `<p>${input.value} - it's not irregular verbs!</p>`;
   }
+
   input.value = '';
 });

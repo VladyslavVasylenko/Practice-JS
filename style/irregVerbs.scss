@@ -43,24 +43,25 @@ body {
   margin: 0 auto;
   margin-bottom: 5%;
   cursor: pointer;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgb(51, 51, 51);
   border: none;
   padding-left: 10px;
+  transition: all 0.5s ease-in;
 }
 
 .form__input:focus {
   border: none;
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px rgb(0, 255, 0);
 }
 
 .form__input:active {
   border: none;
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px rgb(0, 255, 0);
 }
 
 .form__input:hover {
   border: none;
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px rgb(0, 255, 0);
 }
 
 .form__btn { 
