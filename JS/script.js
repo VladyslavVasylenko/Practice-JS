@@ -11,11 +11,11 @@ let input = document.querySelector('.form__search');
 
 btnClick.onclick = function(e) {
   e.preventDefault();
-  if ( input.value == 'HTML' ) {
+  if ( input.value == 'HTML' || input.value == 'html' ) {
     document.querySelector('.result').innerHTML = `<p class="text"><b>HTML</b> - ${answer[0].HTML}</p>`;
-  } else if ( input.value == 'CSS' ) {
+  } else if ( input.value == 'CSS' || input.value == 'css' ) {
     document.querySelector('.result').innerHTML = `<p class="text"><b>CSS</b> - ${answer[1].CSS}</p>`;
-  } else if ( input.value == 'JS' ) {
+  } else if ( input.value == 'JS' || input.value == 'js' ) {
     document.querySelector('.result').innerHTML = `<p class="text"><b>JS</b> - ${answer[2].JS}</p>`;
   } else {
     document.querySelector('.result').innerHTML = '<p class="text">Sorry we don`t have information.</p>';
