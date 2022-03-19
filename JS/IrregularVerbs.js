@@ -10,6 +10,14 @@ button.addEventListener('click', function(e) {
     answer.innerHTML = '<p>Buy <br> Bought - (second form PAST SIMPLE) <br> Bought - (three form PAST SIMPLE) <br> перевод - покупать.</p>';
   } else if (input.value == 'beat' || input.value == 'Beat') {
     answer.innerHTML = '<p>Beat <br> Beat - (second form PAST SIMPLE) <br> Beaten - (three form PAST SIMPLE) <br> перевод - Бить.</p>';
+  } else if (input.value == 'be' || input.value == 'Be') {
+    answer.innerHTML = '<p>Be <br> was, were - (second form PAST SIMPLE) <br> Been - (three form PAST SIMPLE) <br> перевод - Быть.</p>';
+  } else if (input.value == 'become' || input.value == 'Become') {
+    answer.innerHTML = '<p>Become <br> Became - (second form PAST SIMPLE) <br> Become - (three form PAST SIMPLE) <br> перевод - Становиться.</p>';
+  } else if (input.value == 'begin' || input.value == 'Begin') {
+    answer.innerHTML = '<p>Begin <br> Began - (second form PAST SIMPLE) <br> Begun - (three form PAST SIMPLE) <br> перевод - Начинать.</p>';
+  } else if (input.value == 'bleed' || input.value == 'Bleed') {
+    answer.innerHTML = '<p>Bleed <br> Bled - (second form PAST SIMPLE) <br> Bled - (three form PAST SIMPLE) <br> перевод - Кровоточить.</p>';
   } else if (input.value == '') {
     answer.innerHTML = '<p>You didn`t write word.</p>';
   } else {

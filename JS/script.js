@@ -43,6 +43,9 @@ btnClick2.onclick = function(e) {
   } else {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber1.value + ' <i class="fas fa-times size-icon"></i> ' + userNumber2.value + ' <i class="fas fa-equals size-icon"></i> ' + multiplic + '</b>' + '</p>';
   }
+
+  userNumber1.value = '';
+  userNumber2.value = '';
 }
 
 // Plus
@@ -62,6 +65,9 @@ btnClick3.onclick = function(e) {
   } else {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber3.value + ' <i class="fas fa-plus size-icon"></i> ' + userNumber4.value + ' <i class="fas fa-equals size-icon"></i> ' + plus + '</b>' + '</p>';
   }
+
+  userNumber3.value = '';
+  userNumber4.value = '';
 }
 
 // Minus
@@ -81,6 +87,9 @@ btnClick4.onclick = function(e) {
   } else {
     result.innerHTML = '<p class="text">' + '<b>' +  'Your result: ' + '<br>' + userNumber5.value + ' <i class="fas fa-minus size-icon"></i> ' + userNumber6.value + ' <i class="fas fa-equals size-icon"></i> ' + minus + '</b>' + '</p>';
   }
+
+  userNumber5.value = '';
+  userNumber6.value = '';
 }
 
 // Division
@@ -100,6 +109,9 @@ btnClick5.onclick = function(e) {
   } else {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber7.value + ' <i class="fas fa-divide size-icon"></i> ' + userNumber8.value + ' <i class="fas fa-equals size-icon"></i> ' + division + '</b>' + '</p>';
   }
+
+  userNumber7.value = '';
+  userNumber8.value = '';
 }
 
 // Percent
@@ -109,6 +121,7 @@ const btnClick6 = document.querySelector('#btn4');
 
 btnClick6.onclick = function(e) {
   e.preventDefault();
+  
   let division = Number(userNumber9.value) / 100 * Number(userNumber10.value);
 
   if ( userNumber9.value == '' ) {
@@ -118,6 +131,9 @@ btnClick6.onclick = function(e) {
   } else {
     result.innerHTML = '<p class="text">' + '<b>' + 'Your result: ' + '<br>' + userNumber9.value + '<i class="fas fa-percent size-icon"></i> from ' + userNumber10.value + ' <i class="fas fa-equals size-icon"></i> ' + division + '</b>' + '</p>';
   }
+
+  userNumber9.value = '';
+  userNumber10.value = '';
 }
 
 // user password validate
